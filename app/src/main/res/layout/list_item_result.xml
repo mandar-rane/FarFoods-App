@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="15dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardCornerRadius="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.viewpager2.widget.ViewPager2
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/vp_shop_image_result"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"/>
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            >
+
+
+<!--            <TextView-->
+<!--                android:id="@+id/tv_shop_name_result"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Shop Name"-->
+<!--                android:textColor="@color/font_dark"-->
+<!--                android:textSize="21sp"-->
+<!--                android:textStyle="bold"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/tv_shop_outlet_result"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Old Sangvi"-->
+<!--                android:textSize="15sp"-->
+<!--                android:textStyle="bold"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/tv_shop_name_result" />-->
+
+            <TextView
+                android:textColor="@color/black"
+                android:id="@+id/tv_shop_name_result"
+                android:layout_width="wrap_content"
+                android:maxWidth="190dp"
+                android:layout_height="wrap_content"
+                android:text="Shop Namedsdsdsddsddsddsd"
+
+                android:textSize="26sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:id="@+id/shop_tags"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/tv_shop_name_result"
+                app:layout_constraintBottom_toTopOf="@id/tv_shop_outlet_result"
+                >
+                <ImageView
+                    android:id="@+id/shop_tags_veg_img_result"
+                    android:scaleX="0.6"
+                    android:visibility="gone"
+                    android:scaleY="0.6"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/veg_symbol_new"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:visibility="gone"
+                    android:textSize="15sp"
+                    android:textColor="#388c3d"
+                    android:id="@+id/shop_tags_veg_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="VEG"/>
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/shop_tags_separator_1_result"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="\u2022"/>
+                <TextView
+                    android:textSize="15sp"
+                    android:id="@+id/shop_tag_1_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Desserts"/>
+                <TextView
+                    android:textSize="15sp"
+                    android:id="@+id/shop_tags_separator_2_result"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="\u2022"/>
+                <TextView
+                    android:textSize="15sp"
+                    android:id="@+id/shop_tag_2_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Bakery"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_shop_outlet_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Old Sangvi"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rating_box_small"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="@id/tv_shop_name_result"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_shop_name_result">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="0.0"
+                    android:textColor="@color/white" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleX="0.6"
+                    android:scaleY="0.6"
+                    android:src="@drawable/baseline_star_rate_24" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

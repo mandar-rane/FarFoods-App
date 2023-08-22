@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="320dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp">
+    <EditText
+        android:id="@+id/change_address_popup_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter New Address"
+        android:layout_margin="10dp"/>
+    <Button
+        android:id="@+id/change_address_popup_save_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginRight="10dp"
+        android:text="SAVE"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        />
+
+
+
+</LinearLayout>

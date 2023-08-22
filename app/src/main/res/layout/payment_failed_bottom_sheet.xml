@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    android:background="#fff6f6"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_alignTop="@id/payment_failed_tv"
+        android:layout_alignBottom="@id/payment_failed_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/cross_in_red_circle"
+        android:id="@+id/red_cross"/>
+    <TextView
+        android:layout_toEndOf="@id/red_cross"
+        android:id="@+id/payment_failed_tv"
+        android:layout_marginStart="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Payment Failed"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        />
+
+    <TextView
+        android:layout_marginTop="4dp"
+        android:layout_alignStart="@id/payment_failed_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="If the amount was deducted, we will refund it automatically and immediately"
+        android:layout_marginEnd="16dp"
+        android:layout_below="@id/payment_failed_tv"
+        android:textSize="18sp"
+        />
+</RelativeLayout>

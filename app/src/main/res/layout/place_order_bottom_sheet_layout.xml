@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="20dp"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="506dp"
+    app:layout_behavior="@string/bottom_sheet_behavior">
+
+    <TextView
+        android:layout_marginBottom="16dp"
+        android:id="@+id/place_order_tv_bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:text="Place Order" />
+
+    <TextView
+        android:layout_marginBottom="4dp"
+        android:id="@+id/sending_order_tv_bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="Sending your order"/>
+
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        app:trackColor="#d3d3d3"
+        android:progressTint="@color/orange_700"
+        app:trackCornerRadius="10dp"
+        app:trackThickness="20dp"
+        android:id="@+id/progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:max="100"
+        android:progress="0" />
+</LinearLayout>

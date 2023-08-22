@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <ImageView
+        android:scaleY="0.7"
+        android:scaleX="0.7"
+        android:src="@drawable/indian_vegetarian_mark"
+        android:id="@+id/veg_symbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        app:layout_constraintStart_toEndOf="@id/veg_symbol"
+        app:layout_constraintTop_toTopOf="@id/veg_symbol"
+        app:layout_constraintBottom_toBottomOf="@id/veg_symbol"
+        android:layout_marginStart="10dp"
+        android:id="@+id/content_qty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        tools:text="1x" />
+
+    <TextView
+        app:layout_constraintStart_toEndOf="@id/content_qty"
+        app:layout_constraintTop_toTopOf="@id/veg_symbol"
+        app:layout_constraintBottom_toBottomOf="@id/veg_symbol"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/black"
+        android:id="@+id/content_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        tools:text="Vanilla Cake" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

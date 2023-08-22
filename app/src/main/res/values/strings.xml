@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">dezapp</string>
+    <string name="RupeeSymb">\u20B9</string>
+    <string name="price">₹%.2f</string>
+    <string name="title_activity_user_location_maps">UserLocationMapsActivity</string>
+    <string name="title_activity_user_location_selector">UserLocationSelectorActivity</string>
+</resources>

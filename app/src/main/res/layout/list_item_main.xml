@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="1dp"
+    android:layout_marginEnd="2dp"
+    android:layout_marginBottom="15dp"
+    app:cardCornerRadius="20dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <!--        <androidx.viewpager2.widget.ViewPager2-->
+        <!--            android:id="@+id/vp_shop_image"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="200dp"/>-->
+        <ImageView
+            android:id="@+id/iv_shop_image"
+            android:layout_width="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_height="220dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+            <RelativeLayout
+                android:padding="8dp"
+                android:id="@+id/shop_details_rl"
+                app:layout_constraintTop_toBottomOf="@id/iv_shop_image"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_alignParentStart="true"
+                    android:id="@+id/tv_shop_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="190dp"
+                    tools:text="bakery name"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    />
+                <LinearLayout
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@id/tv_shop_name"
+                    android:gravity="center_vertical"
+                    android:id="@+id/shop_tags_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+
+                    >
+                    <ImageView
+                        android:visibility="gone"
+                        android:id="@+id/shop_tags_veg_img"
+                        android:scaleX="0.6"
+                        android:scaleY="0.6"
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/veg_symbol_new"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:visibility="gone"
+                        android:textSize="15sp"
+                        android:textColor="#388c3d"
+                        android:id="@+id/shop_tags_veg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="VEG"/>
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/shop_tags_separator_1"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="\u2022"/>
+                    <TextView
+                        android:textSize="15sp"
+                        android:id="@+id/shop_tag_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="Desserts"/>
+                    <TextView
+                        android:textSize="15sp"
+                        android:id="@+id/shop_tags_separator_2"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="\u2022"/>
+                    <TextView
+                        android:textSize="15sp"
+                        android:id="@+id/shop_tag_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="Bakery"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@id/shop_tags_result"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/shop_tags_result"
+                    android:id="@+id/tv_shop_outlet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="shop outlet"
+                    android:textSize="15sp"
+                    />
+
+                <LinearLayout
+
+                    android:layout_alignBottom="@id/tv_shop_name"
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rating_box_small"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    >
+
+                    <TextView
+                        android:id="@+id/shop_rating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="0.0"
+                        android:textColor="@color/white" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleX="0.6"
+                        android:scaleY="0.6"
+                        android:src="@drawable/baseline_star_rate_24" />
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!-- thin_line.xml -->
+    <View
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/address_separator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#CCCCCC" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Home"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/address_separator"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/address_tag"/>
+
+    <TextView
+        android:id="@+id/address_content"
+        app:layout_constraintTop_toBottomOf="@id/address_tag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Flat No.3, Hello Apartmant, Nagar Nagar, Old sangvi, pune-27, Nagar, Nagr, Old Sangvi"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

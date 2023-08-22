@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".activities.PersonalDetails">
+    <TextView
+        android:id="@+id/add_pd"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Personal Details"
+        android:textSize="25sp"
+        android:textColor="@color/black"/>
+    <TextView
+        android:textSize="18sp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintTop_toBottomOf="@+id/add_pd"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/name_label"
+        app:layout_constraintBottom_toTopOf="@id/name_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name*"/>
+
+
+    <EditText
+
+        android:layout_marginTop="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_label"
+        android:padding="10dp"
+        android:background="@drawable/login_et"
+        android:id="@+id/editTextName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="legion"
+        android:gravity="start"
+        android:hint="Enter Name"
+        android:inputType="textPersonName"
+        />
+
+
+
+    <TextView
+        android:textSize="18sp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintTop_toBottomOf="@+id/editTextName"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/email_label"
+        app:layout_constraintBottom_toTopOf="@id/editTextEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"/>
+
+
+    <EditText
+        android:layout_marginTop="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email_label"
+        android:padding="10dp"
+        android:background="@drawable/login_et"
+        android:id="@+id/editTextEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:hint="Enter Email"
+        android:inputType="textEmailAddress"
+        />
+
+    <TextView
+        android:textSize="18sp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/phone_label"
+        app:layout_constraintBottom_toTopOf="@id/editTextPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone Number*"/>
+
+    <ImageView
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phone_label"
+        android:layout_marginEnd="10dp"
+        android:padding="10dp"
+        android:background="@drawable/login_et"
+        android:id="@+id/ind_flag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/india_flag_icon"/>
+
+
+    <EditText
+        android:focusable="false"
+        android:layout_marginStart="5dp"
+        app:layout_constraintStart_toEndOf="@id/ind_flag"
+        app:layout_constraintTop_toTopOf="@+id/ind_flag"
+        app:layout_constraintBottom_toBottomOf="@id/ind_flag"
+        android:padding="10dp"
+        android:background="@drawable/login_et"
+        android:id="@+id/editTextPhone"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        tools:text="9876543210"
+        android:gravity="start"
+        android:hint="Enter Phone"
+        android:inputType="phone"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="change"
+        app:layout_constraintBottom_toBottomOf="@id/editTextPhone"
+        app:layout_constraintTop_toTopOf="@id/editTextPhone"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="18sp"
+        android:textColor="@color/orange_700"
+        android:id="@+id/update_phone_btn"
+        android:clickable="true"/>
+
+
+
+    <!--<TextView
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintTop_toTopOf="@+id/editTextPhone"
+        app:layout_constraintBottom_toBottomOf="@id/editTextPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        android:textSize="20sp"
+        android:textColor="@color/orange_500"
+        android:id="@+id/add_phone_btn" />-->
+
+
+
+
+
+
+
+
+    <View
+        android:id="@+id/line_divider"
+        app:layout_constraintTop_toBottomOf="@+id/ind_flag"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="10dp"
+        android:background="#D3D3D3" />
+
+<!--    <TextView-->
+<!--        android:textSize="25sp"-->
+<!--        android:layout_marginTop="25dp"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/line_divider"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        android:id="@+id/add_loc_details"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Add Location Details"/>-->
+
+<!--    <TextView-->
+<!--        android:textSize="18sp"-->
+<!--        android:layout_marginTop="25dp"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/add_loc_details"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        android:id="@+id/comp_addr_label"-->
+
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Complete Address*"/>-->
+
+
+
+<!--    <EditText-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/comp_addr_label"-->
+<!--        android:padding="10dp"-->
+<!--        android:background="@drawable/login_et"-->
+<!--        android:id="@+id/editTextCompAddr"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        tools:text="Flat, Wing, Society, Nagar, Town, City"-->
+<!--        android:gravity="start"-->
+<!--        android:hint="Enter Complete Address"-->
+<!--        android:inputType="textPostalAddress"-->
+<!--        />-->
+
+    <Button
+        android:id="@+id/save_proceed_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Save Details and Proceed"/>
+
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

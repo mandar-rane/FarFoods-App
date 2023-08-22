@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.SearchActivity"
+    android:orientation="vertical"
+    android:padding="14dp">
+
+    <androidx.appcompat.widget.SearchView
+        android:focusable="false"
+
+        app:searchIcon="@drawable/quantum_ic_arrow_back_grey600_24"
+        app:iconifiedByDefault="false"
+        app:queryHint="Bakery name or item..."
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/search_view_bg"
+        android:id="@+id/sv_search_result_activity"/>
+
+    <TextView
+        android:textColor="@color/black"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        android:id="@+id/result_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="All bakeries delivering chocolate truffle cake"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/search_result_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:gravity="start"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="italic"
+        android:fontFamily="@font/days_one"
+        android:text="dezerto"
+        android:textSize="37dp" />
+
+</LinearLayout>

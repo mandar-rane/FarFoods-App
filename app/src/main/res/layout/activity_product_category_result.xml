@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".activities.ProductCategoryResultActivity">
+    <ImageView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_keyboard_arrow_down_24"
+        android:rotation="90"
+        android:id="@+id/product_list_back_btn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+    <androidx.appcompat.widget.SearchView
+        app:layout_constraintTop_toBottomOf="@id/product_list_back_btn"
+        android:id="@+id/sv_prod_subcat_page"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="2dp"
+        android:background="@drawable/search_view_bg"
+        android:elevation="2dp"
+        android:focusable="false"
+        app:iconifiedByDefault="false"
+        app:queryHint="Bakery name or item..."
+        app:searchIcon="@drawable/ic_baseline_search_24" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@id/sv_prod_subcat_page"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+                <RelativeLayout
+                    android:id="@+id/shopname_header_product_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_marginEnd="5dp"
+                        android:id="@+id/star_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/baseline_stars_24"/>
+                    <TextView
+                        android:layout_alignTop="@id/star_icon"
+                        android:layout_alignBottom="@id/star_icon"
+                        android:layout_toEndOf="@id/star_icon"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Popular choices"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"
+                        android:id="@+id/product_category_name"/>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/product_sub_category_rv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/product_category_name"/>
+                    <View
+                        android:layout_below="@id/product_sub_category_rv"
+                        android:visibility="visible"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+
+                        android:background="#D3D3D3" />
+                </RelativeLayout>
+
+
+
+                <RelativeLayout
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="12dp"
+                    android:layout_below="@id/shopname_header_product_list"
+                    android:id="@+id/menu_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/menu_name"
+                        android:textSize="22sp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:text="All Bakeries delivering cake"/>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_below="@id/menu_name"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/sub_category_result_rv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false"
+                        />
+                    <View
+                        android:layout_below="@id/sub_category_result_rv"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"/>
+
+                </RelativeLayout>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

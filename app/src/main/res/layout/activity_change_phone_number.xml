@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:padding="16dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.change_phone_number_activity">
+
+    <TextView
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter a phone number, and we will send an OTP for verification"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/msg"/>
+
+    <RelativeLayout
+        android:id="@+id/phone_rel_lay"
+
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/msg"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+
+        <TextView
+            android:layout_marginTop="25dp"
+            android:textSize="17sp"
+            android:gravity="start"
+            android:id="@+id/phonenum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Phone Number"
+            android:layout_marginBottom="15dp"/>
+
+        <ImageView
+            android:layout_below="@+id/phonenum"
+            android:layout_marginEnd="10dp"
+            android:layout_alignTop="@id/phone_et"
+            android:layout_alignBottom="@id/phone_et"
+
+            android:id="@+id/ind_flag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/india_flag_icon"/>
+
+
+
+        <EditText
+            android:layout_below="@+id/phonenum"
+            android:layout_toRightOf="@+id/ind_flag"
+            android:id="@+id/phone_et"
+            android:padding="15dp"
+            tools:text="987654321"
+            android:inputType="phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Phone Number"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            />
+
+
+
+
+
+    </RelativeLayout>
+
+    <Button
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="Send OTP"
+        android:id="@+id/send_otp_btn"/>
+
+
+
+
+  </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_marginBottom="20dp"
+    android:padding="10dp"
+    android:backgroundTint="#efeff0"
+    android:background="@drawable/order_items_bg"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <TextView
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/orders_shop_name_tv"
+            android:layout_marginBottom="5dp"
+
+            android:layout_width="wrap_content"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_height="match_parent"
+            tools:text="Kekiz"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"/>
+        <TextView
+            android:id="@+id/orders_shop_outlet_tv"
+            android:layout_marginBottom="5dp"
+
+            android:layout_width="wrap_content"
+
+            android:textSize="15sp"
+            android:layout_height="match_parent"
+            tools:text="Old Sangvi"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/orders_shop_name_tv"/>
+
+        <TextView
+            android:id="@+id/order_status_indicator"
+            android:padding="4dp"
+            android:textSize="13sp"
+            android:backgroundTint="@color/quantum_grey"
+            android:background="@drawable/order_status_indicator"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="Processing"
+            app:layout_constraintTop_toTopOf="@id/orders_shop_name_tv"
+            app:layout_constraintBottom_toBottomOf="@id/orders_shop_outlet_tv"
+            />
+
+        <View
+            android:id="@+id/order_item_sep_line_1"
+            app:layout_constraintTop_toBottomOf="@id/orders_shop_outlet_tv"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="10dp"
+
+            android:layout_weight="1"
+            android:background="#D3D3D3" />
+
+        <LinearLayout
+            android:id="@+id/linear_layout_orders"
+            app:layout_constraintTop_toBottomOf="@id/order_item_sep_line_1"
+            app:layout_constraintBottom_toTopOf="@+id/order_item_sep_line_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+        </LinearLayout>
+
+        <View
+
+            android:id="@+id/order_item_sep_line_2"
+            app:layout_constraintTop_toBottomOf="@id/linear_layout_orders"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="10dp"
+
+            android:layout_weight="1"
+            android:background="#D3D3D3" />
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/order_item_sep_line_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+
+                    android:id="@+id/order_time"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:gravity="start"
+                    android:textSize="12sp"
+                    />
+
+                <TextView
+                    android:id="@+id/order_total"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:text="159"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:gravity="end"
+                    android:textSize="14sp"
+                    />
+
+        </LinearLayout>
+
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+

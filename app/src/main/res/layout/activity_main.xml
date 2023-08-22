@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".activities.MainActivity">
+
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_marginBottom="10dp"
+                android:id="@+id/main_activity_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/loc_symbol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/address_preview_ll"
+                    android:layout_alignBottom="@id/address_preview_ll"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginEnd="8dp"
+
+                    android:scaleX="1.4"
+                    android:scaleY="1.4"
+                    android:src="@drawable/ic_baseline_location_on_24"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/address_preview_ll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/loc_symbol"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/address_preview_main_activity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Pimpri Chinchwad"
+                        android:textColor="#3b444b"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@id/loc_symbol"
+                        app:layout_constraintStart_toEndOf="@id/loc_symbol"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/detailed_address_preview_main_activity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pimpri Chinchwad"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        app:layout_constraintStart_toStartOf="@id/address_preview_main_activity"
+
+
+                        app:layout_constraintTop_toBottomOf="@id/address_preview_main_activity" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/address_dropdown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/address_preview_ll"
+                    android:layout_toEndOf="@id/address_preview_ll"
+                    android:src="@drawable/ic_baseline_keyboard_arrow_down_24"
+
+                    />
+
+                <ImageButton
+                    android:id="@+id/main_activity_account_symbol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/address_preview_ll"
+                    android:layout_alignBottom="@id/address_preview_ll"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="4dp"
+                    android:background="@color/white"
+                    android:scaleX="1.5"
+                    android:scaleY="1.5"
+                    android:src="@drawable/ic_baseline_account_circle_24"
+
+                    />
+
+            </RelativeLayout>
+
+            <FrameLayout
+                android:id="@+id/fvmain"
+                app:layout_scrollFlags="scroll|enterAlways"
+                android:layout_below="@id/main_activity_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!-- Add your sticky content here -->
+                <androidx.appcompat.widget.SearchView
+
+
+                    android:id="@+id/sv_main_page"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/search_view_bg"
+                    android:elevation="2dp"
+                    android:focusable="false"
+                    app:iconifiedByDefault="false"
+                    app:queryHint="Bakery name or item..."
+                    app:searchIcon="@drawable/ic_baseline_search_24" />
+            </FrameLayout>
+
+
+
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/main_page_banner"
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:layout_below="@id/fvmain"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="10dp">
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/main_activity_card_vp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/viewpager_coffees" />
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:id="@+id/main_grid_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/main_page_banner"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:background="#D3D3D3"
+
+                    android:visibility="visible" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:gravity="center"
+                    android:text="WHATS ON YOUR MIND?"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/line_divider"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:background="#D3D3D3"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/main_grid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/main_grid_title"
+                android:layout_alignStart="@id/rv_main_page"
+                android:layout_alignEnd="@id/rv_main_page"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:nestedScrollingEnabled="false" />
+
+
+
+            <LinearLayout
+                android:id="@+id/all_restaurants_sep"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/main_grid"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:background="#D3D3D3"
+
+                    android:visibility="visible" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:gravity="center"
+                    android:text="ALL BAKERIES AND CAFES"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:background="#D3D3D3"
+
+                    android:visibility="visible" />
+
+
+            </LinearLayout>
+
+
+
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmer_main_page_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/all_restaurants_sep"
+                android:layout_marginTop="14dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/card_shimmer_layout" />
+
+
+
+                </LinearLayout>
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_main_page"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/all_restaurants_sep"
+                android:layout_marginTop="14dp"
+                android:nestedScrollingEnabled="false"
+                android:visibility="gone" />
+
+
+        </RelativeLayout>
+
+
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
