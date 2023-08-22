@@ -25,9 +25,9 @@
         android:layout_marginTop="20dp"
         app:layout_constraintBottom_toTopOf="@id/login_rel_lay"
         android:gravity="center_horizontal"
-        android:text="Bakery Items at your Doorsteps"
-        android:textSize="34sp"
-        android:textStyle="bold" />
+        android:text="Tasty treats, just a tap away."
+        android:textSize="42sp"
+        android:textStyle="bold|italic" />
 
     <RelativeLayout
         android:id="@+id/login_rel_lay"
@@ -80,8 +80,8 @@
 
         <Button
             android:textStyle="bold"
-            android:textColor="@color/black"
-            android:backgroundTint="@color/dez_blue_10"
+            android:textColor="@color/white"
+            android:backgroundTint="#ff3131"
             android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="55dp"

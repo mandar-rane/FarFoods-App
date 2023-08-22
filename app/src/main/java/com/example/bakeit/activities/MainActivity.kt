@@ -213,9 +213,8 @@ class MainActivity : AppCompatActivity(), LocationService.LocationCallback {
         viewPager2 = findViewById<ViewPager2>(R.id.main_activity_card_vp)
         handler = Handler(Looper.myLooper()!!)
         cardVpImageList = ArrayList() //
-        cardVpImageList.add(R.drawable.viewpager_coffees)
-        cardVpImageList.add(R.drawable.viewpager_cakes)
-        cardVpImageList.add(R.drawable.viewpager_shakes)
+        cardVpImageList.add(R.drawable.discounts_vp)
+        cardVpImageList.add(R.drawable.burg_vp)
 
         sliderAdapter = MainActivityCardSliderAdapter(cardVpImageList, viewPager2)
         viewPager2.adapter = sliderAdapter

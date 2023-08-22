@@ -402,7 +402,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
                     android:layout_centerVertical="true"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="22sp"
                     android:textStyle="bold"
                     tools:text="$500" />
@@ -416,7 +416,7 @@
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
                     android:text="Place Order"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="22sp"
                 />
 

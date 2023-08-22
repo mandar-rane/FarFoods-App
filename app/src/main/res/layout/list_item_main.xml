@@ -40,7 +40,7 @@
                     android:id="@+id/tv_shop_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:maxWidth="190dp"
+                    android:maxWidth="250dp"
                     tools:text="bakery name"
                     android:textColor="@color/black"
                     android:textSize="24sp"

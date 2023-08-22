@@ -28,7 +28,7 @@
         android:id="@+id/result_header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:text="All bakeries delivering chocolate truffle cake"/>
+        tools:text="All restaurants delivering chocolate truffle cake"/>
 
 
     <androidx.recyclerview.widget.RecyclerView
@@ -43,7 +43,7 @@
         android:layout_height="wrap_content"
         android:textStyle="italic"
         android:fontFamily="@font/days_one"
-        android:text="dezerto"
+        android:text="FarFoods"
         android:textSize="37dp" />
 
 </LinearLayout>

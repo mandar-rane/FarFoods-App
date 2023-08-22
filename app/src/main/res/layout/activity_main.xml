@@ -68,7 +68,7 @@
                         android:id="@+id/detailed_address_preview_main_activity"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Pimpri Chinchwad"
+                        android:text="Pune"
                         android:textSize="12sp"
                         android:textStyle="bold"
                         android:singleLine="true"
@@ -224,7 +224,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
                     android:gravity="center"
-                    android:text="ALL BAKERIES AND CAFES"
+                    android:text="ALL RESTAURANTS"
                     android:textSize="15sp"
                     android:textStyle="bold" />
 

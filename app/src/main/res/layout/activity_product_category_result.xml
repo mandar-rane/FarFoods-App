@@ -94,7 +94,7 @@
                         android:textStyle="bold"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        tools:text="All Bakeries delivering cake"/>
+                        tools:text="All restaurants delivering cake"/>
                     <androidx.recyclerview.widget.RecyclerView
                         android:layout_below="@id/menu_name"
                         android:layout_marginTop="10dp"
