@@ -159,7 +159,7 @@ class CheckoutActivity : RoomBaseActivity(), PaymentResultWithDataListener {
     private fun startRazorpayPayment(orderId: String) {
 
         val co = Checkout()
-        co.setKeyID("rzp_test_YsPCoiiov5G2Cj")
+        co.setKeyID("")
 
         try {
             val options = JSONObject()
